@@ -26,5 +26,8 @@
             Exemplos:
             | cor  | tamanho | quantidade | mensagem                                                  |
             | Azul | P       | 1          | "Produto adicionado ao carrinho!"                         |
-            |      | P       | 1          | "Preencha todos os campos obrigatórios "                             |
             | Azul | P       | 15         | "Só é permitido incluir 10 produtos por vez no carrinho!" |
+
+            Cenário: Não definir um dos campos obrigatórios
+            Quando eu tentar inserir no carrinho
+            Então deve exibir a mensagem "Preencha todos os campos obrigatório"
