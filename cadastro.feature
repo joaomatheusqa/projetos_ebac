@@ -9,13 +9,11 @@ Contexto:
   Dado que eu acesse a página de cadastro da EBAC-SHOP
 
 Esquema do Cenário: Autenticar múltiplos usuários
-  Quando eu preencher os seguintes dados para finalizar uma compra:
-    | nome     | sobrenome | país     | endereço              | cidade     | cep        | telefone      | email                      |
-    | <nome>   | <sobrenome>| <pais>   | <endereco>           | <cidade>   | <cep>      | <telefone>    | <email>                    |
+  Quando eu preencher os campos <nome>,<sobrenome>,<pais>,<endereco>,<cidade>,<cep>,<telefone> e <email>
   Então deve exibir a mensagem <mensagem> de retorno
 
 Exemplos:
-  | nome     | sobrenome | país     | endereço              | cidade     | cep        | telefone      | email                       | mensagem                                |
+  | nome     | sobrenome | pais     | endereco              | cidade     | cep        | telefone      | email                       | mensagem                                |
   | "João"   | "Matheus" | "Brasil" | "Rua da alegria, 123" | "Curitiba" | "80010100" | "41997999999" | "emailvalido@ebac.com.br"   | "Pedido realizado com sucesso!!"        |
   | "123"    | "Matheus" | "Brasil" | "Rua da alegria, 123" | "Curitiba" | "80010100" | "41997999999" | "emailvalido@ebac.com.br"   | "Insira um nome e sobrenome válido!"    |
   | "João"   | "123"     | "Brasil" | "Rua da alegria, 123" | "Curitiba" | "80010100" | "41997999999" | "emailvalido@ebac.com.br"   | "Insira um nome e sobrenome válido!"    |
